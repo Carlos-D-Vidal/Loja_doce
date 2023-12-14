@@ -1,3 +1,4 @@
+import { baseUrl } from "../api.js";
 import { toastify } from "../toastify.js";
 const form = document.querySelector("form")
 const myHeaders = {
@@ -15,7 +16,7 @@ async function register(){
     const btn = document.querySelector("#register-submit")
    
     const bodyJson = JSON.stringify(user)
-    const res = await fetch("http://localhost:3001/users",{
+    const res = await fetch(`${baseUrl}/users`,{
         headers:myHeaders, 
         method:"POST",
         body:bodyJson

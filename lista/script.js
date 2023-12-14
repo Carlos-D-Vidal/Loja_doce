@@ -1,10 +1,11 @@
+import { baseUrl } from '../api.js';
 import {menu} from '../menu.js'
 const myHeaders = {
     "Content-Type": "application/json",
 };
 async function lista() {
     const res = await fetch(
-        "http://localhost:3001/produtos"
+        `${baseUrl}/produtos`
     )
     const prod = await res.json()
     console.log(prod)
