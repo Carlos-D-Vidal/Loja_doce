@@ -1,6 +1,7 @@
 import {menu} from '../menu.js'
+import { baseUrl } from "../api.js";
 async function selectProduto(){
-    const produtos = await fetch("http://localhost:3001/produtos")
+    const produtos = await fetch(`${baseUrl}/produtos`)
     const produtosJson = await produtos.json()
     const selecione = document.querySelector("select")
     produtosJson.forEach(element => {
@@ -20,7 +21,7 @@ const myHeaders = {
 async function cadastrarVenda(){
     const select = document.querySelector("select").value
     const quantidade = document.querySelector("input").value
-    const produto = await fetch (`http://localhost:3001/produtos/${select}`)
+    const produto = await fetch (`${baseUrl}/produtos/${select}`)
     const produtoJson = await produto.json()
     console.log(produtoJson)
     const ano = new Date().getFullYear()
@@ -36,7 +37,7 @@ async function cadastrarVenda(){
     }
     const bodyJson = JSON.stringify(venda)
     const res = await fetch(
-        "http://localhost:3001/venda",
+        `${baseUrl}/venda`,
         {
             headers: myHeaders,
             method: "POST",

@@ -19,7 +19,7 @@ ul.innerHTML = ""
 lista.forEach((venda) => {
     ul.insertAdjacentHTML("beforeend", `
     <li id="lista-li">
-        <p>Nome: ${string}</p>
+        <p>Nome: ${produto}</p>
         <p>Valor da venda: ${venda.valorVenda}</p>
         <p>Data da venda: ${venda.dia}/${venda.mês}/${venda.ano}</p>
     </li>

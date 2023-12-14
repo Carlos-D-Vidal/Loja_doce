@@ -1,9 +1,13 @@
+@font-face{
+    font-family: Bitter;
+    src: url(Bitter-VariableFont_wght.ttf);
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-style: normal;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Bitter;
 }
 button{
     cursor: pointer;
@@ -126,9 +130,9 @@ ul{
     align-items: center;
     gap: 100px;
     list-style: none;
-    font-size: large;
     position: relative;
     top: 40px;
+    flex-flow: wrap;
 }
 li{
     font-weight: 600;
@@ -142,5 +146,5 @@ li{
 #menu a{
     text-decoration:none;
     color: white;
-    margin: 0px 20px;
+    margin: 0px 50px;
 }

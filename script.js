@@ -4,6 +4,7 @@
 //     console.log(resJson)
 // }
 // getUsers()
+import { baseUrl } from "./api.js";
 import {toastify} from "./toastify.js"
 const myHeaders = {
     "Content-Type": "application/json", 
@@ -20,7 +21,7 @@ async function login(){
     console.log(user)
     const bodyJson = JSON.stringify(user)
     const res = await fetch(
-        "http://localhost:3001/login",
+        `${baseUrl}/login`,
     { 
         
         headers:myHeaders, 
