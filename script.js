@@ -21,7 +21,7 @@ async function login(){
     console.log(user)
     const bodyJson = JSON.stringify(user)
     const res = await fetch(
-        `${baseUrl}/login`,
+        `${baseUrl}/login/`,
     { 
         
         headers:myHeaders, 
@@ -35,7 +35,7 @@ async function login(){
             localStorage.setItem("@token-exemplo",resJson.accessToken)
             localStorage.setItem("@user-exemplo",JSON.stringify(resJson.user))
             setTimeout(()=>{
-                window.location.href = "./lista"
+                window.location.href = "./lista/"
             },3000)
         }else{
             toastify("Email ou senha incorretos","error")

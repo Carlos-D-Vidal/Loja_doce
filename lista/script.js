@@ -5,7 +5,7 @@ const myHeaders = {
 };
 async function lista() {
     const res = await fetch(
-        `${baseUrl}/produtos`
+        `${baseUrl}/produtos/`
     )
     const prod = await res.json()
     console.log(prod)

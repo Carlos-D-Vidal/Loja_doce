@@ -17,7 +17,7 @@ async function cadastrarProduto() {
     console.log(produto)
     const bodyJson = JSON.stringify(produto)
     const res = await fetch(
-        `${baseUrl}/produtos`,
+        `${baseUrl}/produtos/`,
         {
             headers: myHeaders,
             method: "POST",

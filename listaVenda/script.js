@@ -4,7 +4,7 @@ import { menu } from "../menu.js";
 
 async function listaVenda() {
     const res = await fetch(
-        `${baseUrl}/venda`
+        `${baseUrl}/venda/`
     )
 
 const produtos = await fetch(`${baseUrl}/produtos`)

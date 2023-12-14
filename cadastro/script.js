@@ -16,7 +16,7 @@ async function register(){
     const btn = document.querySelector("#register-submit")
    
     const bodyJson = JSON.stringify(user)
-    const res = await fetch(`${baseUrl}/users`,{
+    const res = await fetch(`${baseUrl}/users/`,{
         headers:myHeaders, 
         method:"POST",
         body:bodyJson
